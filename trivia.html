@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Setup Site -->
+    <title>Eric's Kahoot Ripoff</title>
+    <!-- Bootstrap setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #welcome {
+            background-color: rgb(163, 31, 163);
+            color: white
+        }
+        #chat{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            padding-right: 17px;
+            padding-bottom: 35px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div class="container" id ="welcome">
+        <div class="jumbotron text-center" id="welcome">
+            <div class="col justify-content-center">
+                <h1>Welcome to a Kahoot Ripoff!</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6">
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" placeholder="Enter name..." aria-label="Username" id="name">
+                    <div class="input-group-append">
+                        <button class="btn btn-light" type="button" id="nameButton">Join Games</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Screen -->
+    <div class="container" id="rooms" style="display: none;">
+        <div class="jumbotron text-center">
+            <h1 id="greetings">Join a Game</h1><br>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter a game code..." aria-label="Game code" id="inputCode">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="join">Join Game</button>
+                </div>
+            </div>
+            <button class="btn btn-outline-secondary" type="button" id="create">Or Create a Game</button>
+        </div>
+        <!-- Add available room codes here -->
+        <div class="row" id="enter"></div>
+    </div>
+
+    <!-- Game Screen w/ chat functionality and main game -->
+    <div class="container-fluid" id="game" style="display: none;">
+        <div class="row">
+            <div class="col-3 border-right vh-100 d-flex align-items-left flex-column" id="chatBox">
+                <div class="row-light border-bottom"><h3 id="game#">Game #</h3></div>
+                <div class="row-light" id="chat"></div>
+                <div class="row-light mt-auto">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control form-control-md" placeholder="Chat..." aria-label="Chat" id="talk">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="chatButton">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9" id="round">
+                <div class="jumbotron container-fluid text-center" style="padding: 2%;border-radius: 0;"><h3 id="status">Game Time!</h3></div>
+                <div class="row border-bottom">
+                    <div class="col text-left"><h5 id="displayName">Name</h5></div>
+                    <div class="col text-center"><h5 id="displayScore">Score: 0</h5></div>
+                    <div class="col text-center"><h5 id="displayTime">30 seconds</h5></div>
+                    <div class="col text-right"><h5 id="question#">?/5</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col" id="questionBox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+
+
+</body>
+</html>
