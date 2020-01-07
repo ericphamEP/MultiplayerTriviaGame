@@ -3,6 +3,7 @@ Eric Pham, 101104095, COMP 2406 - Assignment 2: Multiplayer Trivia
 My kahoot ripoff that'll totally be good competition for it.
 
 Screenshots:
+
 Gameplay Screen
 ![gameplay](/images/triviaGameplay.png)
 
