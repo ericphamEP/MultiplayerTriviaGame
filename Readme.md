@@ -25,5 +25,4 @@ Addons:
 
 Score system:
 If correct, add Math.floor((10*timeLeft)/3)
-If wrong or no answer, -50 points
-Minimum points of 0
+If wrong or no answer, -50 points. Minimum points of 0.
