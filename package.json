@@ -1,0 +1,18 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "Eric Pham\r 101104095\r COMP 2406\r Assignment 2\r Multiplayer Trivia\r ----------------------------\r My kahoot ripoff that'll totally be good competition for it.",
+  "main": "client.js",
+  "dependencies": {
+    "http": "0.0.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
