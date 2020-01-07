@@ -19,7 +19,10 @@ Welcome Screen
 Instructions:
 -------------
 Starting server:
-- Navigate to directory of the files and run in the command line: node server.js
+- Navigate to directory of the files
+- In the command line: npm install
+- Enter command to run server: node server.js
+
 Playing game:
 - go to localhost:3000 on a browser (repeat for each client, because this game supports multiple people)
 - Enter name, click button
