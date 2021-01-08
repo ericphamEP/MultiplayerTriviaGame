@@ -1,6 +1,6 @@
 Eric Pham, COMP 2406 - Assignment 2: Multiplayer Trivia
 ----------------------------
-My kahoot ripoff that'll totally be good competition for it.
+My kahoot ripoff that will be good competition for it.
 
 Screenshots:
 
